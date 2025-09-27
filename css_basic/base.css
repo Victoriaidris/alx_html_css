@@ -6,10 +6,16 @@ body {
 }
 
 header ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+  display: flex;          /* makes the list items align in a row */
+  list-style: none;       /* removes bullets */
+  margin: 0;
   padding: 0;
+  gap: 20px;              /* space between items */
+  align-items: center;    /* vertically center items */
+}
+
+header ul li {
+  display: inline-block;  /* prevents stacking */
 }
 
 header a {

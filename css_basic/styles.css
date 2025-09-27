@@ -36,3 +36,91 @@ header, footer {
   color: #fff;
   text-align: center;
 }
+
+/* responsive: stack article + aside on small screens */
+@media (max-width: 720px) {
+  body.works_on_smartphone main {
+    flex-direction: column;   /* article and aside stacked vertically */
+  }
+
+  body.works_on_smartphone article,
+  body.works_on_smartphone aside {
+    flex: none;               /* reset flex sizing */
+    width: 100%;
+    padding: 16px;            /* comfortable padding for mobile */
+    box-sizing: border-box;
+  }
+
+  /* make header nav more touch-friendly */
+  header ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: gold;
+  margin-right: 20px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  margin: 0;
+}
+
+header {
+  background: #333;
+  color: white;
+}
+
+header a {
+  color: white;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+header a:hover {
+  background: #444;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  font-size: 14px;
+}
+
+article h1 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 8px;
+}
+
+article h2, article h3, article h4 {
+  color: #34495e;
+}
+
+article p {
+  color: #555;
+  line-height: 1.8;
+}
+
+article table {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+article th {
+  background: #3498db;
+  color: white;
+}
+
+article td {
+  background: #f9f9f9;
+}
+
