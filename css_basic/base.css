@@ -19,3 +19,15 @@ header a {
   padding: 6px 12px;
   border-radius: 4px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
