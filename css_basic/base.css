@@ -6,25 +6,20 @@ body {
 }
 
 header ul {
-  display: flex;          /* makes the list items align in a row */
-  list-style: none;       /* removes bullets */
+  display: flex;          /* align in a row */
+  flex-direction: row;    /* ensure horizontal */
+  list-style: none;       /* remove bullets */
   margin: 0;
   padding: 0;
-  gap: 20px;              /* space between items */
-  align-items: center;    /* vertically center items */
+  gap: 20px;              /* spacing between items */
+  align-items: center;    /* vertical alignment */
 }
 
 header ul li {
-  display: inline-block;  /* prevents stacking */
+  display: flex;          /* keeps each item as a flex child */
+  align-items: center;    /* centers content inside */
 }
 
-header a {
-  text-decoration: none;
-  color: white;
-  background: black;
-  padding: 6px 12px;
-  border-radius: 4px;
-}
 
 img {
   max-width: 100%;
@@ -37,3 +32,13 @@ table {
   overflow-x: auto;
   display: block;
 }
+
+/* Force header items to stay horizontal even on mobile */
+header ul {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start; /* or space-between if you want spacing */
+  align-items: center;
+}
+
